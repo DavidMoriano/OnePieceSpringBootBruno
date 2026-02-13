@@ -1,0 +1,27 @@
+meta {
+  name: insertar tripulacion
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/v2/tripulaciones
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "id": 10,
+      "nombre": "pruebaBruno",
+      "barco": "barcoBruno",
+      "estaActiva": 1,
+      "cantidadReclutados": 10,
+      "numeroMiembros": 3
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

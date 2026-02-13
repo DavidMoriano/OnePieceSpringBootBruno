@@ -1,0 +1,27 @@
+meta {
+  name: Borrado Tripulacion
+  type: http
+  seq: 6
+}
+
+delete {
+  url: http://localhost:8080/v2/tripulaciones/5
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "id": 5,
+      "nombre": "pruebaBrunoMod",
+      "barco": "barcoBruno",
+      "estaActiva": 0,
+      "cantidadReclutados": 10,
+      "numeroMiembros": 3
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
