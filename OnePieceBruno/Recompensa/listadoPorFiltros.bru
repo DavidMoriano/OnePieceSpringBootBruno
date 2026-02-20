@@ -1,0 +1,23 @@
+meta {
+  name: listadoPorFiltros
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8080/v2/recompensas?nombrePirata=PrimeraPrueba&idTripulacion&cantidadMin=300000000&vigente=0
+  body: none
+  auth: inherit
+}
+
+params:query {
+  nombrePirata: PrimeraPrueba
+  idTripulacion: 
+  cantidadMin: 300000000
+  vigente: 0
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

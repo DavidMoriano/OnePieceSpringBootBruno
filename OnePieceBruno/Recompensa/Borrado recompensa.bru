@@ -1,0 +1,27 @@
+meta {
+  name: Borrado recompensa
+  type: http
+  seq: 6
+}
+
+delete {
+  url: http://localhost:8080/v2/recompensas/7
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "id": 7,
+      "idPirata": 1,
+      "nombrePirata": "PrimeraPrueba",
+      "tripulacion": "Piratas del Sombrero de Paja",
+      "cantidad": 1,
+      "estaVigente": 0
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
